@@ -5,6 +5,7 @@
   "main": "config/webpack.dev",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev --progress --colors --inline --hot --open",
+    "rap": "webpack-dev-server --config config/webpack.rap --progress --colors --inline --hot --open",
     "dll": "webpack --config config/webpack.dll --progress --profile --colors",
     "bundle": "webpack --config config/webpack.prod --progress --profile --colors",
     "polyfill": "webpack config/ie8-polyfills.js polyfill/ie8-polyfills-min.js -p",

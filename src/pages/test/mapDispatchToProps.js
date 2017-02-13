@@ -18,7 +18,7 @@ const action = {
 
 const fetchPosts = (dispatch, getState) => {
   // dispatch(action.get);
-  return fetch(`api/limitTest`)
+  return fetch(`/api/limitTest`)
     .then(response => response.json())
     .then(json => dispatch(action.result(json)));
 };

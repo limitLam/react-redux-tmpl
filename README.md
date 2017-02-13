@@ -1,6 +1,6 @@
 # react-redux-tmpl
 
-React + Antd + redux 前端项目模板（支持IE8+）
+React + Redux + Antd  前端项目模板（支持IE8+）
 
 # Quick Start
 
