@@ -22,6 +22,24 @@ const routes = {
         })
       }
     },
+    //  编辑器
+    {
+      path: 'editor',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          cb(null, require('PAGES/editor').default)
+        })
+      }
+    },
+    //  测试
+    {
+      path: 'test',
+      getComponent(nextState, cb) {
+        require.ensure([], (require) => {
+          cb(null, require('PAGES/test').default)
+        })
+      }
+    },
     // 404
     {
       path: '*',
@@ -34,24 +52,30 @@ const routes = {
   ]
 };
 
-import { Router, hashHistory } from 'react-router';
+import {
+  Router,
+  hashHistory
+} from 'react-router';
 
-import React, { Component, PropTypes } from 'react';
+import React, {
+  Component,
+  PropTypes
+} from 'react';
 
 class Routers extends Component {
-    static propTypes = {
-        className: PropTypes.string,
-    };
+  static propTypes = {
+    className: PropTypes.string,
+  };
 
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-        return (
-            <Router history = {hashHistory} routes = {routes} />
-        );
-    }
+  render() {
+    return (
+      <Router history = {hashHistory} routes = {routes} />
+    );
+  }
 }
 
 export default Routers;

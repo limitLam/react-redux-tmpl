@@ -2,9 +2,9 @@
  * fetch wrapper
  */
 
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch';
 
-import State from '../containers/Layouts/state'
+import State from '../containers/Layouts/state';
 
 /**
  * @param { String } url 异步请求地址
