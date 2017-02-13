@@ -36,8 +36,15 @@ module.exports = Object.assign(commonConfig, {
         // 压缩js/css
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false
-            }
+                screw_ie8: false,
+                warnings: false,
+                drop_debugger: true,
+                drop_console: true
+            },
+            mangle: false,
+            output:   {
+                screw_ie8: false,
+            },
         }),
         // 复制polyfill文件到dist目录
         new CopyWebpackPlugin([

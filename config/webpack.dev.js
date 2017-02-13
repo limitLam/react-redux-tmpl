@@ -25,6 +25,7 @@ module.exports = Object.assign(commonConfig, {
     ]),
     // webpack dev server 配置
     devServer: {
+        stats: 'errors-only',
         host: HOST,
         port: PORT,
         proxy: {

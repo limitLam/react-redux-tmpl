@@ -1,6 +1,6 @@
-# react-antd-boilerplate
+# react-redux-tmpl
 
-React + Antd 前端项目模板（支持IE8+）
+React + Antd + redux 前端项目模板（支持IE8+）
 
 # Quick Start
 
@@ -50,13 +50,12 @@ docs                                # 项目文档
 node_modules                        
 polyfill                            # polyfill打包文件（IE8兼容包）
 src                                 # 项目源码
+|-- action                          # 公用action，主要为修改全局状态的action，供给page中的action引入
 |-- assets                          # 静态资源，包括公用的 css/less/html/images 等
 |-- components                      # 公用组件，主要是react组件
 |   |-- loading
 |   |   |-- index.js
 |   |   |-- index.less
-|   |   |-- __tests__               # 测试文件
-|   |   |   |-- xx.js
 |-- entries                         # 入口目录
 |   |-- app.html                    # 入口页
 |   |-- app.js                      # 入口JS
@@ -64,19 +63,22 @@ src                                 # 项目源码
 |   |-- page1                       
 |   |   |-- index.js                # 页面逻辑
 |   |   |-- index.less              # 页面样式
-|   |   |-- img                     # 页面图片
-|   |   |   |-- xx.png          
-|   |   |-- __tests__               # 测试文件
-|   |   |   |-- xx.js
+|   |   |-- mapDispatchToProps.js   # 页面redux的mapDispatchToProps
+|   |   |-- mapStateToProps.js   	# 页面redux的mapStateToProps
+|   |   |-- reducer.js   			# 页面redux的reducer
+|   |   |-- state.js   				# 页面redux的state
+|-- reducers                        
+|   |-- index.js    				# reducer总体整合                   
 |-- routes                          # 页面路由
+|-- store                        
+|   |-- index.js    				# store
 |-- utils                           # 工具库
-tests                               # 其他测试文件
 package.json                        
 README.MD
 ```
 
 # 注意事项
 
-- Antd 用的是 1.x 版本（兼容IE8），用法请查看 [1.x API 文档](http://192.168.8.160:2000/components/button/)
+- Antd 用的是 1.11.2 版本（兼容IE8），用法请查看 [1.x API 文档](http://1x.ant.design/)
 - 安装 cnpm：```npm install -g cnpm --registry=https://registry.npm.taobao.org```
 - 删除 node_modules 文件夹： ```rd /s/q node_modules```
