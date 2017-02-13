@@ -44,6 +44,7 @@ config
 |-- utils.js                        # 配置工具库
 |-- webpack.common.js               # 公共配置
 |-- webpack.dev.js                  # 开发配置
+|-- webpack.rap.js                  # 开发rap配置，调用的是淘宝Mock服务器
 |-- webpack.prod.js                 # 生产配置
 dist                                # 打包目录
 docs                                # 项目文档
